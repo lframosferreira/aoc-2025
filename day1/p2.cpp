@@ -47,5 +47,21 @@ const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 int main() {
   _
 
+      string in;
+        int pos=50;
+        int cnt=0;
+        int newpos;
+  while (cin >> in){
+      int m=1;
+       int d=in[0];
+        if (d=='L') m=-1;   
+        int siz=stoi(in.substr(1));
+        newpos=pos+m*siz;
+        for (int i = pos; i != newpos; i+=m) if (i%100==0)cnt++;
+        pos=newpos;
+  } 
+  cnt+=newpos%100==0;
+
+  cout << cnt << endl;
       exit(0);
 }

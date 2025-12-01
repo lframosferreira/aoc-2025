@@ -1,6 +1,15 @@
 // pescoço pra baixo é canela
 
-#include <bits/stdc++.h>
+#include <vector>
+#include <string>
+#include <map>
+#include <set>
+#include <unordered_set>
+#include <unordered_map>
+#include <stack>
+#include <queue>
+#include <list>
+#include <iostream>
 
 using namespace std;
 
@@ -38,5 +47,18 @@ const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 int main() {
   _
 
+      string in;
+        int pos=50;
+        int cnt=0;
+  while (cin >> in){
+      int m=1;
+       int d=in[0];
+        if (d=='L') m=-1;   
+        int siz=stoi(in.substr(1));
+        pos+=m*siz;
+        
+        if (pos%100==0)cnt++;
+  } 
+  cout << cnt << endl;
       exit(0);
 }
